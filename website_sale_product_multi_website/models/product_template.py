@@ -35,9 +35,9 @@ class ProductTemplate(models.Model):
             else:
                 record.website_published = record.is_published
 
-    def _search_website_published(self, operator, value):
-        """We overwrite this method completely in order to
-        use the website_ids logic instead of website_id"""
-        return super(
-            ProductTemplate, self.with_context(multi_website_domain=True)
-        )._search_website_published(operator, value)
+    # def _search_website_published(self, operator, value):
+    #     """We overwrite this method completely in order to
+    #     use the website_ids logic instead of website_id"""
+    #     return super(
+    #         ProductTemplate, self.with_context(multi_website_domain=True)
+    #     )._search_website_published(operator, value)
